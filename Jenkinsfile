@@ -26,7 +26,7 @@ spec:
     stage('Build a buildah project') {
       container('buildah') {
         git 'https://github.com/jkhelil/buildah-pipeline.git'
-        sh 'buildah bud -f ./Dockerfile -t jawed-buildah:1.0. --device /dev/fuse .'
+        sh 'buildah bud -f ./Dockerfile -t jawed-buildah:1.0. --storage-driver vfs .'
       }
     }
   }
